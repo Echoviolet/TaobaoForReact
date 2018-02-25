@@ -4,7 +4,8 @@
   "description": "a project for React.js",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "webpack-dev-server --inline --hot",
+    "dev-prod": "set NODE_ENV=prod&&nodemon server.dev.js"
   },
   "repository": {
     "type": "git",
@@ -16,5 +17,12 @@
   "bugs": {
     "url": "https://github.com/Echoviolet/TaobaoForReact/issues"
   },
-  "homepage": "https://github.com/Echoviolet/TaobaoForReact#readme"
+  "homepage": "https://github.com/Echoviolet/TxaobaoForReact#readme",
+  "devDependencies": {
+    "nodemon": "^1.15.1",
+    "webpack": "^3.5.5",
+    "webpack-dev-middleware": "^1.2.0",
+    "webpack-dev-server": "^1.16.2",
+    "webpack-hot-middleware": "^2.9.1"
+  }
 }
