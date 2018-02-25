@@ -14,6 +14,25 @@ module.exports = {
         filename: 'bundle.js',
         chunkFilename:'[id],chunk_[hash].js',
         publicPath:'/static/scripts/'
-    }
+    },
+    module:{
+        loaders:[
+            {
+                test:'/\.js$/',
+                loaders:[ 'babel' ],
+                exclude: /node_modules/,
+                include: __dirname
+            },
+            {
+                test:/\.scss$/,
+                loaders:"style!css!sass"
+            }
+        ]
+
+    },
+    resolveLoader: {
+        moduleExtensions: ['-loader']
+    },
+
 
 };
